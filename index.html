@@ -3,112 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Institucional - Porsche GT3 S/C-i-2-3-4.</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            color: #e2e8f0;
-            background-image: url('https://elferspot.com');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-        
-        /* Menu de navegação estilizado estilo vidro borrado com detalhes neon */
-        nav {
-            background-color: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            border-bottom: 6cqb solid #7dcec7;
-            display: flex;
-            align-items: center; /* Alinha verticalmente os itens e o botão */
-            gap: 54px;
-            padding: 18px 30px;
-            position: relative; /* Permite posicionar o botão em relação à barra azul */
-        }
-        
-        .nav-item {
-            color: #e2e8f0;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-item:hover {
-            color: #38bdf8;
-        }
-        
-        .icone-nav {
-            width: 22px;
-            height: 22px;
-            filter: invert(0.9);
-        }
-        
-        /* Container de conteúdo principal */
-        .conteudo {
-            max-width: 800px;
-            margin: 100px auto;
-            padding: 30px;
-            background-color: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(58, 189, 248, 0.2);
-            border-radius: 12px;
-            text-align: center;
-        }
-        
-        h1 {
-            color: #dbd576;
-            margin-top: 0;
-        }
-        
-        p {
-            line-height: 1.6;
-        }
-        
-        /* Estilização do Botão de Fechar (X) ajustado para a barra azul */
-        .botao-fechar {
-            position: absolute;
-            right: 30px;     /* Alinhado com a margem direita da nav */
-            background: none;
-            border: none;
-            color: #e2e8f0;
-            font-size: 28px;
-            line-height: 1;
-            cursor: pointer;
-            transition: color 0.2s, transform 0.2s;
-            padding: 0;
-        }
-        
-        .botao-fechar:hover {
-            color: #ef4444;
-            transform: scale(1.15);
-        }
-    </style>
+    <title>Site Institucional - Porsche GT3 S/C</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
-        <a class="nav-item" href="../Home/index.html">
-            <img class="icone-nav" src="../assets/icons/botao-home.png" alt="Home">
+        <a class="nav-item ativo" href="#home" data-secao="home">
+            <img class="icone-nav" src="botao-home.png" alt="">
             <span>Home</span>
         </a>
-        <a class="nav-item" href="../Instituicao/index.html">
-            <img class="icone-nav" src="../assets/icons/botao-home.png" alt="Instituição">
+        <a class="nav-item" href="#instituicao" data-secao="instituicao">
             <span>Instituição</span>
         </a>
-        <a class="nav-item" href="../Produtos/index.html">
-            <img class="icone-nav" src="../assets/icons/botao-home.png" alt="Produtos">
+        <a class="nav-item" href="#produtos" data-secao="produtos">
             <span>Produtos</span>
         </a>
-        <a class="nav-item" href="../Contato/index.html">
-            <img class="icone-nav" src="../assets/icons/botao-home.png" alt="Contato">
+        <a class="nav-item" href="#contato" data-secao="contato">
             <span>Contato</span>
         </a>
 
@@ -117,8 +28,32 @@
     </nav>
 
     <main class="conteudo">
-        <h1>Porsche GT3 S/C</h1>
-        <p>Experimente a engenharia purista das pistas combinada com a liberdade ao ar livre no inédito modelo GT3 conversível.</p>
+
+        <section id="home" class="secao ativa">
+            <h1>Porsche GT3 S/C</h1>
+            <p>Experimente a engenharia purista das pistas combinada com a liberdade ao ar livre no inédito modelo GT3 conversível.</p>
+        </section>
+
+        <section id="instituicao" class="secao">
+            <h1>Instituição</h1>
+            <p>Somos uma concessionária especializada em esportivos Porsche, com atendimento personalizado, oficina própria e equipe treinada para cuidar do seu carro do test-drive à manutenção.</p>
+        </section>
+
+        <section id="produtos" class="secao">
+            <h1>Produtos</h1>
+            <ul class="lista-produtos">
+                <li>Porsche 911 GT3 S/C</li>
+                <li>Porsche 911 GT3</li>
+                <li>Porsche 911 GT3 Touring</li>
+                <li>Acessórios e peças originais</li>
+            </ul>
+        </section>
+
+        <section id="contato" class="secao">
+            <h1>Contato</h1>
+            <p>Entre em contato com a nossa equipe para agendar um test-drive.</p>
+        </section>
+
     </main>
 
     <script src="script.js"></script>
